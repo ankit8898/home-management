@@ -10,6 +10,15 @@ class MembersController < ApplicationController
     end
   end
 
+  def ankit_shubham
+    @members = Member.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @members }
+    end
+
+  end
   # GET /members/1
   # GET /members/1.xml
   def show

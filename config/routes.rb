@@ -1,6 +1,12 @@
 HomeManagement::Application.routes.draw do
-  resources :members
+  resources :ankit_shubhams
 
+  resources :members do
+    collection do
+      get :ankit_shubham
+    end
+  end
+  resources :home
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +57,7 @@ HomeManagement::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "members#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
