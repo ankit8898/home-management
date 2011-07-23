@@ -85,7 +85,7 @@ class DetailsController < ApplicationController
     @detail.destroy
 
     respond_to do |format|
-      format.html { redirect_to(details_url) }
+      format.html { redirect_to(ankit_shubham_details_url) }
       format.xml  { head :ok }
     end
   end
