@@ -1,7 +1,5 @@
 HomeManagement::Application.routes.draw do
-  resources :ankit_shubhams
-
-  resources :members do
+ resources :details do
     collection do
       get :ankit_shubham
     end

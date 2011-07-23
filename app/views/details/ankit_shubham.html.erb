@@ -1,0 +1,25 @@
+<table style =" width: 700px;">
+  <tr>
+    <td>
+      <h1><%=@group_name.name%></h1>
+    </td>
+    <td>
+      <%= link_to 'New detail', new_detail_path %>
+    </td>
+  </tr>
+</table>
+
+<br/>
+<table>
+  <tr>
+
+    <th>Description</th>
+
+  </tr>
+
+  <% @details.each do |detail| %>
+    <tr>
+      <td><%= link_to detail.description , detail %></td>
+    </tr>
+  <% end %>
+</table>

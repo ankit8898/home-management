@@ -10,18 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110723063602) do
+ActiveRecord::Schema.define(:version => 20110723085920) do
 
-  create_table "ankit_shubhams", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "members", :force => true do |t|
+  create_table "details", :force => true do |t|
     t.string   "name"
     t.datetime "date"
     t.integer  "amount"
     t.text     "description"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,10 +1,10 @@
-<%= form_for(@member) do |f| %>
-  <% if @member.errors.any? %>
+<%= form_for(@detail) do |f| %>
+  <% if @detail.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+      <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
 
       <ul>
-      <% @member.errors.full_messages.each do |msg| %>
+      <% @detail.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :cols =>60, :rows => 6 %>
   </div>
   <div class="actions">
     <%= f.submit %>
