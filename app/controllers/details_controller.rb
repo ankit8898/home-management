@@ -81,7 +81,7 @@ class DetailsController < ApplicationController
   # DELETE /details/1
   # DELETE /details/1.xml
   def destroy
-    @detail = detail.find(params[:id])
+    @detail = Detail.find(params[:id])
     @detail.destroy
 
     respond_to do |format|
