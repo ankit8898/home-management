@@ -1,7 +1,9 @@
 <table style =" width: 700px;">
   <tr>
     <td>
+      <%  unless @group_name.blank? %>
       <h1><%=@group_name.name%></h1>
+      <%end%>
     </td>
     <td>
       <%= link_to 'New detail', new_detail_path %>
