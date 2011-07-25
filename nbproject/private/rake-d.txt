@@ -9,6 +9,7 @@ db\:drop\:all=
 db\:fixtures\:identify=
 db\:fixtures\:load=Load fixtures into the current environment's database.  Load specific fixtures using FIXTURES=x,y. Load from subdirectory in test/fixtures using FIXTURES_DIR=z. Specify an alternative path (eg. spec/fixtures) using FIXTURES_PATH=spec/fixtures.
 db\:forward=
+db\:load=
 db\:load_config=
 db\:migrate=Migrate the database (options: VERSION=x, VERBOSE=false).
 db\:migrate\:down=
@@ -16,6 +17,7 @@ db\:migrate\:redo=
 db\:migrate\:reset=
 db\:migrate\:status=Display status of migrations
 db\:migrate\:up=
+db\:populate_groups=populate data in states table
 db\:reset=
 db\:rollback=Rolls the schema back to the previous version (specify steps w/ STEP=n).
 db\:schema\:dump=Create a db/schema.rb file that can be portably used against any DB supported by AR

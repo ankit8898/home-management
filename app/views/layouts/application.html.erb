@@ -27,12 +27,19 @@
       </div>
 
       <div id="menu">
-        <ul>
-          <li><%= link_to 'Home' ,home_index_path %></li>
-          <li><%= link_to 'Ankit-Shubham' ,ankit_shubham_details_path %></li>
-          <li><%= link_to 'Nikhil-Shubham' ,ankit_shubham_details_path %></li>
-        </ul>
+        <% if user_signed_in? -%>
+          <ul>
+            <li><%= link_to 'Home' ,home_index_path %></li>
+            <li><%= link_to 'Ankit-Shubham' ,ankit_shubham_details_path %></li>
+            <li><%= link_to 'Nikhil-Shubham' ,ankit_shubham_details_path %></li>
+          </ul>
+
+          <%= current_user.email %> |
+          <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+
+        <%end%>
       </div>
+
 
       <div id="content">
         <div class="left">
@@ -45,23 +52,26 @@
         <div class="right">
 
 
+          <% if user_signed_in? -%>
           <h2>Archives</h2>
-          <ul>
-            <li><a href="#">January 2011</a></li>
-            <li><a href="#">February 2011</a></li>
-            <li><a href="#">March 2011</a></li>
-            <li><a href="#">April 2011</a></li>
-            <li><a href="#">May 2011</a></li>
-            <li><a href="#">June 2011</a></li>
-            <li><a href="#">July 2011</a></li>
-            <li><a href="#">August 2011</a></li>
-            <li><a href="#">September 2011</a></li>
-            <li><a href="#">October 2011</a></li>
-            <li><a href="#">November 2011</a></li>
-            <li><a href="#">December 2011</a></li>
-          </ul>
 
+            <ul>
+              <li><a href="#">January 2011</a></li>
+              <li><a href="#">February 2011</a></li>
+              <li><a href="#">March 2011</a></li>
+              <li><a href="#">April 2011</a></li>
+              <li><a href="#">May 2011</a></li>
+              <li><a href="#">June 2011</a></li>
+              <li><a href="#">July 2011</a></li>
+              <li><a href="#">August 2011</a></li>
+              <li><a href="#">September 2011</a></li>
+              <li><a href="#">October 2011</a></li>
+              <li><a href="#">November 2011</a></li>
+              <li><a href="#">December 2011</a></li>
+            </ul>
+          <%end%>
         </div>
+
         <div style="clear: both;"> </div>
       </div>
 
