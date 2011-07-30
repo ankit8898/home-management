@@ -5,7 +5,7 @@ require 'rails/all'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
-config.action_mailer.default_url_options = { :host => 'stop-kharcha.heroku.com' }
+
 module HomeManagement
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -35,7 +35,7 @@ module HomeManagement
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
-
+    config.action_mailer.default_url_options = { :host => 'stop-kharcha.heroku.com' }
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
   end
